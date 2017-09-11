@@ -10,10 +10,10 @@
 	<bean id="ldapContextSource" class="org.springframework.ldap.core.support.LdapContextSource">
 
 		<property name="referral" value="follow"></property>
-		<property name="url" value="ldap://10.10.16.3:389" />
+		<property name="url" value="ldap://10.10.16.123:389" />
 		<property name="base" value="ou=People,dc=openldap,dc=jw,dc=cn" />
 		<property name="userDn" value="cn=Manager,dc=openldap,dc=jw,dc=cn" />
-		<property name="password" value="T5Ut6m4Z15IO2Yz" />
+		<property name="password" value="T5z" />
 		<property name="baseEnvironmentProperties">
 			<map>
 				<entry key="java.naming.security.authentication" value="simple" />
@@ -26,7 +26,7 @@
 	
 	<bean id="ldapSource"
 		class="org.springframework.security.ldap.DefaultSpringSecurityContextSource">
-		<constructor-arg value="ldap://10.10.16.3:389" />
+		<constructor-arg value="ldap://10.10.16.123:389" />
 		<property name="userDn" value="cn=Manager,dc=openldap,dc=jw,dc=cn" />
 		<property name="password" value="T5Ut6m4Z15IO2Yz" />
 	</bean>
